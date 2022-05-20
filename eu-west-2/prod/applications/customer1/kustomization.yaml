@@ -8,6 +8,3 @@ helmCharts:
   releaseName: helm-vault-a-prod
   namespace: prod
   valuesFile: https://github.com/jerrycan321/helm-kustomize-poc/eu-west-2/prod/applications/customer1/values.yaml
-
-literals:
-- kustomize.buildOptions=--enable-helm
