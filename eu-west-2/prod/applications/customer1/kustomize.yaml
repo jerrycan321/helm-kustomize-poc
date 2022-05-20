@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+helmCharts:
+- name: vault
+  repo: https://helm.releases.hashicorp.com
+  version: 0.8.0
+  releaseName: helm-vault-a-prod
+  namespace: prod
+  valuesFile: https://github.com/jerrycan321/helm-kustomize-poc/eu-west-2/prod/applications/customer1/values.yaml
