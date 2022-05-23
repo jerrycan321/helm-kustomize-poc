@@ -1,2 +1,3 @@
-injector:
-  replicas: 2
+vault:
+  injector:
+    replicas: 2
