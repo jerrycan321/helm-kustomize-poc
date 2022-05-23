@@ -7,4 +7,4 @@ helmCharts:
   version: 0.8.0
   releaseName: helm-vault-a-prod
   namespace: prod
-  valuesFile: https://github.com/jerrycan321/helm-kustomize-poc/eu-west-2/prod/applications/customer1/values.yaml
+  valuesFile: https://raw.githubusercontent.com/jerrycan321/helm-kustomize-poc/main/eu-west-2/prod/applications/customer1/values.yaml
