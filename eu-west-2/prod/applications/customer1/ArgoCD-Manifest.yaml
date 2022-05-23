@@ -6,9 +6,23 @@ metadata:
 spec:
   project: default
   source:
+    plugin:
+      name: kustomize-build-with-helm
     repoURL: https://github.com/jerrycan321/helm-kustomize-poc.git # Repository containing the Kustomization.yaml file
 #    targetRevision: HEAD
     path: eu-west-2/prod/applications/customer1 # Path to folder for kustomization.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: prod
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true 
+  ignoreDifferences:
+    - group: admissionregistration.k8s.io
+      kind: MutatingWebhookConfiguration
+      jqPathExpressions:
+      - .webhooks[]?.clientConfig.caBundle
+
