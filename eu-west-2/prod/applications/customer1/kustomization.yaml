@@ -4,7 +4,7 @@ kind: Kustomization
 helmCharts:
 - name: vault
   repo: https://helm.releases.hashicorp.com
-  version: 0.19.0
+  version: 0.18.0
   releaseName: helm-vault-a-prod
   namespace: prod
   valuesFile: https://raw.githubusercontent.com/jerrycan321/helm-kustomize-poc/main/eu-west-2/prod/applications/customer1/values.yaml
